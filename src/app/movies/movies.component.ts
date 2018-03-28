@@ -10,6 +10,12 @@ import { MovieService } from '../movie.service';
 export class MoviesComponent implements OnInit {
 
   movies : Array<Movie>
+  rate=5;
+
+  updateRating(movie: Movie){
+    console.log(movie);
+    this.movieService.addRating(movie).subscribe();
+  }
 
   outputData(){
     console.log(this.movies)

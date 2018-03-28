@@ -5,6 +5,12 @@
   </mat-card-header>
   <img mat-card-image src="https://image.tmdb.org/t/p/w500/{{movie.backdrop_path}}" *ngIf="movie.backdrop_path">
   <img mat-card-image src="http://placehold.it/500x250" *ngIf="!movie.backdrop_path">
+
+  <mat-card-content>
+    <bar-rating [(rate)]="movie.overall_rating" (rateChange)="updateRating(movie)" [max]="5"></bar-rating>
+    {{movie.overall_rating}} star(s)
+   
+  </mat-card-content>
 </mat-card>
 
 <button (click)="outputData()">button</button>

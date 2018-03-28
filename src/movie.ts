@@ -4,4 +4,5 @@ export class Movie {
     poster_path: string;
     title: string;
     overview: string;
+    overall_rating:number;
  }

@@ -21,7 +21,7 @@ export class DashboardComponent implements OnInit {
 
   addMovie(movie:Movie){
     this.movieService.addMovie(movie).subscribe();
-    this.snackBar.open(' ${movie.title} added to database',"Dismiss", {duration:2000})
+    this.snackBar.open(`${movie.title} added to database`,"Dismiss", {duration:2000})
   }
 
   constructor(private movieService : MovieService, private snackBar: MatSnackBar) { }

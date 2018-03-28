@@ -16,6 +16,18 @@ export class MovieService {
     let endpoint:string = `https://api.themoviedb.org/3/search/movie?api_key=432c0afd509bb2221799f0d7c39c2141&query=${search}&include_adult=false&language=en-US`;
     return this.http.get<Movie>(endpoint).map(res =>res['results'])
   }
+
+  addRating(movie: Movie){
+    
+    let newRating = {
+      movieId: movie.id,
+      stars: movie.overall_rating
+    }
+    return this.http.post("http://localhost:8080/rating",newRating);
+
+  }
+
+
   addMovie(movie: Movie){
     console.log(movie);
     let newMovie ={
