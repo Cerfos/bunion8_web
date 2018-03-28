@@ -1,0 +1,11 @@
+<mat-form-field>
+  <input matInput placeholder="Movie Name" [(ngModel)]="searchTerm">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="search()">Search...</button>
+<div *ngFor="let movie of movies">
+  <button mat-icon-button (click)="addMovie(movie)">
+    <mat-icon aria-label="Add Movie" color="primary">add_to_queue</mat-icon>
+  </button>
+  {{movie.title}}
+  
+</div>
