@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { MatCardModule, MatButtonModule, MatToolbarModule, MatInputModule, MatIconModule, MatFormFieldModule } from '@angular/material';
+import { MatSnackBarModule,MatCardModule, MatButtonModule, MatToolbarModule, MatInputModule, MatIconModule, MatFormFieldModule } from '@angular/material';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -11,13 +11,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { MovieService } from './movie.service';
+import { MoviesComponent } from './movies/movies.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    DashboardComponent
+   
+    DashboardComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +28,7 @@ import { MovieService } from './movie.service';
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
+    MatSnackBarModule,
     AppRoutingModule,
     FlexLayoutModule,
     MatFormFieldModule, 

@@ -1,0 +1,10 @@
+<mat-card *ngFor="let movie of movies">
+  <mat-card-header>
+    <mat-card-title>{{movie.title}}</mat-card-title>
+    <mat-card-subtitle>{{movie.overview}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://image.tmdb.org/t/p/w500/{{movie.backdrop_path}}" *ngIf="movie.backdrop_path">
+  <img mat-card-image src="http://placehold.it/500x250" *ngIf="!movie.backdrop_path">
+</mat-card>
+
+<button (click)="outputData()">button</button>
